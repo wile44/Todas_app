@@ -45,6 +45,7 @@ class TaskCardWidget extends StatelessWidget {
   }
 }
 
+//Testing the widget before implement it
 class TaskCardTesting extends StatelessWidget {
   final String title;
   final String desc;
@@ -114,9 +115,66 @@ class TaskCardTesting extends StatelessWidget {
               )
             ],
           ),
-          Divider(
-            height: 20.0,
-            indent: 48.0,
+        ],
+      ),
+    );
+  }
+}
+
+//Testing this widget for the Lists of widget
+class ListWidget extends StatelessWidget {
+  final String title;
+  final String taskNumber;
+  ListWidget({this.title, this.taskNumber});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Lists",
+              style: TextStyle(
+                color: Colors.black38,
+                fontSize: 16.0,
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+              left: 16,
+              top: 12.0,
+              bottom: 13.0,
+            ),
+            height: 69.0,
+            decoration: BoxDecoration(
+                color: Color(0xFFB678FF),
+                borderRadius: BorderRadius.circular(10.0)),
+            width: double.infinity,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                      fontSize: 19.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+                SizedBox(height: 4),
+                Text(
+                  taskNumber + " Tasks",
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
           )
         ],
       ),

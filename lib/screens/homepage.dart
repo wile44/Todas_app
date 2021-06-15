@@ -109,7 +109,25 @@ class _HomepageState extends State<Homepage> {
                       )
                     ],
                   ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Lists",
+                      style: TextStyle(
+                        color: Colors.black38,
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ),
                   _taskListBuilder(),
+                  ListWidget(
+                    title: "Work",
+                    taskNumber: "12",
+                  ),
+                  ListWidget(
+                    title: "Personal",
+                    taskNumber: "20",
+                  ),
                 ],
               ),
               _floatingButton(),
