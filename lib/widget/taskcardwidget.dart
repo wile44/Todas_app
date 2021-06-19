@@ -130,7 +130,8 @@ class TaskCardTesting extends StatelessWidget {
 class ListWidget extends StatelessWidget {
   final String title;
   final String taskNumber;
-  ListWidget({this.title, this.taskNumber});
+  final int colorCode;
+  ListWidget({this.title, this.taskNumber, this.colorCode});
 
   @override
   Widget build(BuildContext context) {
@@ -146,9 +147,9 @@ class ListWidget extends StatelessWidget {
               top: 12.0,
               bottom: 13.0,
             ),
-            height: 69.0,
+            height: 65.0,
             decoration: BoxDecoration(
-                color: Color(0xFFB678FF),
+                color: Color(colorCode),
                 borderRadius: BorderRadius.circular(10.0)),
             width: double.infinity,
             child: Column(
@@ -161,7 +162,7 @@ class ListWidget extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
-                SizedBox(height: 4),
+                SizedBox(height: 2),
                 Text(
                   taskNumber + " Tasks",
                   style: TextStyle(

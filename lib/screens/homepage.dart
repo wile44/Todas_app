@@ -54,12 +54,12 @@ class _HomepageState extends State<Homepage> {
           width: 60.0,
           height: 60.0,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20.0),
+              borderRadius: BorderRadius.circular(64.0),
               // gradient: LinearGradient(
               //     begin: Alignment(0.0, -1.0),
               //     end: Alignment(0.0, 1.0),
               //   colors: [Color(0xFF7349FE), Color(0xFF643FDB)]),
-              color: Colors.black12),
+              color: Colors.white),
           child: Image(image: AssetImage('assets/images/Plus.png')),
         ),
         onTap: () {
@@ -111,22 +111,29 @@ class _HomepageState extends State<Homepage> {
                   ),
                   _taskListBuilder(),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(50, 10, 8, 8),
+                    padding: const EdgeInsets.fromLTRB(42, 10, 8, 8),
                     child: Text(
                       "Lists",
                       style: TextStyle(
-                        color: Colors.black38,
-                        fontSize: 16.0,
-                      ),
+                          color: Colors.black38,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                   ListWidget(
                     title: "Work",
                     taskNumber: "12",
+                    colorCode: 0xFF61DEA4,
+                  ),
+                  ListWidget(
+                    title: "Inbox",
+                    taskNumber: "20",
+                    colorCode: 0xFFFFE761,
                   ),
                   ListWidget(
                     title: "Personal",
                     taskNumber: "20",
+                    colorCode: 0xFFB678FF,
                   ),
                 ],
               ),
