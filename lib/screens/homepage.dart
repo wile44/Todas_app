@@ -109,8 +109,9 @@ class _HomepageState extends State<Homepage> {
                       )
                     ],
                   ),
+                  _taskListBuilder(),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.fromLTRB(50, 10, 8, 8),
                     child: Text(
                       "Lists",
                       style: TextStyle(
@@ -119,7 +120,6 @@ class _HomepageState extends State<Homepage> {
                       ),
                     ),
                   ),
-                  _taskListBuilder(),
                   ListWidget(
                     title: "Work",
                     taskNumber: "12",

@@ -115,6 +115,11 @@ class TaskCardTesting extends StatelessWidget {
               )
             ],
           ),
+          Divider(
+            height: 10.0,
+            thickness: 0.2,
+            indent: 45,
+          )
         ],
       ),
     );
@@ -134,17 +139,8 @@ class ListWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              "Lists",
-              style: TextStyle(
-                color: Colors.black38,
-                fontSize: 16.0,
-              ),
-            ),
-          ),
           Container(
+            margin: EdgeInsets.fromLTRB(40, 0, 0, 10.0),
             padding: EdgeInsets.only(
               left: 16,
               top: 12.0,
