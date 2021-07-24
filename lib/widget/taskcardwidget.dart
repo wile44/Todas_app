@@ -140,37 +140,39 @@ class ListWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            margin: EdgeInsets.fromLTRB(40, 0, 0, 10.0),
-            padding: EdgeInsets.only(
-              left: 16,
-              top: 12.0,
-              bottom: 13.0,
-            ),
-            height: 65.0,
-            decoration: BoxDecoration(
-                color: Color(colorCode),
-                borderRadius: BorderRadius.circular(10.0)),
-            width: double.infinity,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(
-                      fontSize: 19.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
-                SizedBox(height: 2),
-                Text(
-                  taskNumber + " Tasks",
-                  style: TextStyle(
-                    fontSize: 14.0,
-                    color: Colors.white,
+          GestureDetector(
+            child: Container(
+              margin: EdgeInsets.fromLTRB(40, 0, 0, 10.0),
+              padding: EdgeInsets.only(
+                left: 16,
+                top: 12.0,
+                bottom: 13.0,
+              ),
+              height: 65.0,
+              decoration: BoxDecoration(
+                  color: Color(colorCode),
+                  borderRadius: BorderRadius.circular(10.0)),
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(
+                        fontSize: 19.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
                   ),
-                ),
-              ],
+                  SizedBox(height: 2),
+                  Text(
+                    taskNumber + " Tasks",
+                    style: TextStyle(
+                      fontSize: 14.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ),
           )
         ],
