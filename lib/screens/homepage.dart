@@ -1,3 +1,4 @@
+import 'package:LifeLine/screens/task_page.dart';
 import 'package:LifeLine/widget/taskcardwidget.dart';
 import 'package:flutter/material.dart';
 
@@ -50,6 +51,16 @@ class _HomepageState extends State<Homepage> {
       bottom: 24.0,
       right: 0.0,
       child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => TaskPageTest(
+                        task: null,
+                      ))).then((value) {
+            setState(() {});
+          });
+        },
         child: Container(
           width: 60.0,
           height: 60.0,
@@ -60,18 +71,8 @@ class _HomepageState extends State<Homepage> {
               //     end: Alignment(0.0, 1.0),
               //   colors: [Color(0xFF7349FE), Color(0xFF643FDB)]),
               color: Colors.white),
-          child: Image(image: AssetImage('assets/images/Plus.png')),
+          child: const Image(image: AssetImage('assets/images/Plus.png')),
         ),
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => Taskpage(
-                        task: null,
-                      ))).then((value) {
-            setState(() {});
-          });
-        },
       ),
     );
   }

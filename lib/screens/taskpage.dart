@@ -197,16 +197,17 @@ class _TaskpageState extends State<Taskpage> {
                           child: Row(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(right: 10.0),
+                                margin: const EdgeInsets.only(right: 10.0),
                                 width: 20.0,
                                 height: 20.0,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(6.0),
                                   border: Border.all(
-                                      color: Color(0xFF86829D), width: 1.5),
+                                      color: const Color(0xFF86829D),
+                                      width: 1.5),
                                   color: Colors.transparent,
                                 ),
-                                child: Image(
+                                child: const Image(
                                     image: AssetImage(
                                         'assets/images/check_icon.png')),
                               ),
@@ -220,10 +221,10 @@ class _TaskpageState extends State<Taskpage> {
                                     if (value != '') {
                                       //check if the task is null
                                       if (_taskId != 0) {
-                                        DatabaseHelper _dbHelper =
+                                        final DatabaseHelper _dbHelper =
                                             DatabaseHelper();
 
-                                        Todo _newTodo = Todo(
+                                        final Todo _newTodo = Todo(
                                           title: value,
                                           isDone: 0,
                                           taskId: _taskId,

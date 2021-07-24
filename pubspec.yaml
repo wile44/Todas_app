@@ -13,12 +13,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.0
   google_fonts: ^1.1.0
-
-  sqflite:
-  path:
+  lint: ^1.2.0
+  path: null
+  sqflite: null
 
 dev_dependencies:
   flutter_test:
