@@ -4,7 +4,6 @@ This is a Task Management App
 
 This is my second Project to be hosted on the GitHub
 The project is current on going. 👍
-# Hola! Amigo Beinvenidos
 
 if you find it super handy be free to use it as part of your project
 
